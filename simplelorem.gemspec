@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = Simplelorem::VERSION
   spec.authors       = ["jaxgeller"]
   spec.email         = ["jacksongeller@gmail.com"]
+  spec.license       = "MIT"
 
   spec.summary       = "a bring-your-own-training-text lorem ipsum generator."
   spec.homepage      = "https://github.com/jaxgeller/simplelorem"
