@@ -1,5 +1,7 @@
 # Simplelorem
 
+[![Build Status](https://travis-ci.org/jaxgeller/simplelorem.svg)](https://travis-ci.org/jaxgeller/simplelorem)
+
 a bring-your-own-training-text lorem ipsum generator. It's simple and easy to use, and fast.
 
 ## Installation
