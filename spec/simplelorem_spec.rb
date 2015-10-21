@@ -33,4 +33,10 @@ describe Simplelorem do
     expect(sentence).to be_a(String)
     expect(sentence.split(/\.|\?|\!/).length).to eq(10)
   end
+
+  it 'does not generates too many separators' do
+    num = 100
+    sentence = g.generate(num)
+    expect(sentence.split(/--|\,|\;/).length).to be < (num / 4)
+  end
 end
