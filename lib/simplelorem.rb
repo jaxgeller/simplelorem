@@ -7,7 +7,7 @@ module Simplelorem
     end
 
     def sanitize(text)
-      text.split(',').map { |i| i.gsub(/\.|\?|\!/, '').split.join(' ') }
+      text.gsub(/\n|\t/,'').split(',').map { |i| i.gsub(/\.|\?|\!/, '').split.join(' ') }
     end
 
     def generate_sentence()
@@ -16,7 +16,7 @@ module Simplelorem
 
       while sentence_length > 0
         word = @text.sample
-        word += [',', ';', ' --'].sample if rand < 0.005 && sentence_length > 2
+        word += [',', ';', ' --'].sample if rand < 0.0025 && sentence_length > 2
         sentence.push word
         sentence_length -= 1
       end
