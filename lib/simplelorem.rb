@@ -23,17 +23,24 @@ module Simplelorem
     end
 
     def generate_sentence()
-      sentence = []
+      sentence = ""
+      length = rand(8..25)
 
-      rand(6..25).times do
+      while (sentence.split.size <= length) do
         word = self.get_unique_word
         word += [',', ',', ',', ';', ' --'].sample if rand < 0.005
-        sentence.push word
+        word += ' '
+        sentence += word
       end
 
       sentence[0] = sentence[0].capitalize
-      sentence[sentence.length-1] = sentence[sentence.length-1] += @avail_punct.sample
-      sentence.join ' '
+      sentence = sentence.chomp(' ')
+      sentence += @avail_punct.sample
+
+      puts sentence
+      puts length
+      puts
+      return sentence
     end
 
     def generate(count)
